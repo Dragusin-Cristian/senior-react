@@ -1,9 +1,10 @@
 import "./App.css";
+import UncontrolledForm from "./components/uncontrolled-form";
 
 function App() {
   return (
-    <div className="App">
-      <h1>Start here</h1>
+    <div>
+      <UncontrolledForm />
     </div>
   );
 }
