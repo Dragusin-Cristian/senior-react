@@ -1,5 +1,6 @@
 import { includeUser } from "./components/include-user";
 import { logProps } from "./components/log-props";
+import UserForm from "./components/user-form";
 import { UserInfo } from "./components/user-info";
 
 // const UserInfoWrapper = logProps(UserInfo);
@@ -13,7 +14,9 @@ function App() {
         user={{ name: "Criss", age: 23, country: "Romania", books: [] }}
       /> */}
 
-      <UserInfoWithLoader />
+      {/* <UserInfoWithLoader /> */}
+
+      <UserForm />
     </>
   );
 }
