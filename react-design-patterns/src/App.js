@@ -1,5 +1,11 @@
+import { UserInfo } from "./components/user-info";
+
 function App() {
-  return <div></div>;
+  return (
+    <>
+      <UserInfo />
+    </>
+  );
 }
 
 export default App;
