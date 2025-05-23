@@ -8,30 +8,30 @@ import UncontrolledFlow from "./components/uncontrolled-flow";
 const StepOne = ({ goNext }) => {
   return (
     <>
-      <h1>Step #1</h1>
-      <button onClick={goNext}>Next</button>
+      <h1>Step #1: Enter your name</h1>
+      <button onClick={goNext.bind(this, { name: "MyName" })}>Next</button>
     </>
   );
 };
 const StepTwo = ({ goNext }) => {
   return (
     <>
-      <h1>Step #2</h1>
-      <button onClick={goNext}>Next</button>
+      <h1>Step #2: Enter your age</h1>
+      <button onClick={goNext.bind(this, { age: 23 })}>Next</button>
     </>
   );
 };
 const StepThree = ({ goNext }) => {
   return (
     <>
-      <h1>Step #3</h1>
-      <button onClick={goNext}>Next</button>
+      <h1>Step #3: Enter your country</h1>
+      <button onClick={goNext.bind(this, { country: "Mars" })}>Next</button>
     </>
   );
 };
 
 function App() {
-  const [shouldDisplay, setShouldDisplay] = useState(false);
+  // const [shouldDisplay, setShouldDisplay] = useState(false);
 
   return (
     <>
@@ -47,7 +47,12 @@ function App() {
       </ControlledModal>
       <button onClick={() => setShouldDisplay(true)}>Show modal</button> */}
 
-      <UncontrolledFlow>
+      <UncontrolledFlow
+        onDone={(data) => {
+          console.log(data);
+          alert("Yaee, you made it to the final step");
+        }}
+      >
         <StepOne />
         <StepTwo />
         <StepThree />
