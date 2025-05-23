@@ -1,7 +1,7 @@
 import React from 'react'
-import { includeUpdatableUser } from './include-updatable-user'
+import { includeUpdatableResource } from './include-updatable-resource'
 
-const UserForm = includeUpdatableUser(({user, onChangeUser, onPostUser, onResetUser}) => {
+const UserForm = includeUpdatableResource(({user, onChangeUser, onPostUser, onResetUser}) => {
 
     const {name, age} = user || {}
 
@@ -15,6 +15,6 @@ const UserForm = includeUpdatableUser(({user, onChangeUser, onPostUser, onResetU
     </>) : <h3>Loading...</h3>
 
 
-}, "3")
+}, "/users/2", "user")
 
 export default UserForm
