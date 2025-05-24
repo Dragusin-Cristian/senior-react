@@ -5,7 +5,10 @@ function App() {
   const [show, setShow] = useState(false);
 
   return (
-    <div>
+    <div 
+    // onClick={console.log("Outer div clicked")} 
+    onClickCapture={() => console.log("Outer div clicked")}
+    >
       <h1>Other Content</h1>
       <button onClick={() => setShow(true)}>Show Message</button>
       <Alert show={show} onClose={() => setShow(false)}>
@@ -21,7 +24,12 @@ const Alert = ({ children, onClose, show }) => {
   if (!show) return;
 
   return (
-    <div className="alert" onClick={onClose}>
+    <div className="alert" onClick={() => {
+        onClose();
+        // console.log("Inner div clicked")
+      }}
+      onClickCapture={() => console.log("Inner div clicked")}
+      >
       {children}
     </div>
   );
