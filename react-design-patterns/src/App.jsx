@@ -8,13 +8,15 @@ function App() {
     <div>
       {changeShirts ? (
         <>
-          <span>Shirts counts: </span> <Counter />{" "}
+          <span>Shirts counts: </span> <Counter key={"shirts"} />{" "}
         </>
       ) : (
         <>
-          <span>Shoes counts: </span> <Counter />{" "}
+          <span>Shoes counts: </span> <Counter key={"shoes"} />{" "}
         </>
       )}
+      <br />
+      <input type="text" key={changeShirts ? "shirst" : "shoes"} />
       <br />
       <button onClick={() => setChangeShirts((s) => !s)}>Switch</button>
     </div>
