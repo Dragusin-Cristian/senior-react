@@ -1,4 +1,5 @@
 import { useState } from "react";
+import {createPortal} from "react-dom"
 import "./App.css";
 
 function App() {
@@ -20,10 +21,11 @@ function App() {
 const Alert = ({ children, onClose, show }) => {
   if (!show) return;
 
-  return (
+  return createPortal(
     <div className="alert" onClick={onClose}>
       {children}
-    </div>
+    </div>,
+    document.querySelector("#alert-holder")
   );
 };
 
