@@ -1,4 +1,4 @@
-const HeavyComponent = ({ keyword }) => {
+const HeavyComponent = ({ keyword }) => {  
   const init = performance.now();
   while (init > performance.now() - 100) {
     //Slowing down the component on purpose.
