@@ -1,12 +1,15 @@
-import { useState } from "react";
+import { useId, useState } from "react";
 
 const Form = () => {
   const [email, setEmail] = useState("");
+
+  const id = useId()
+
   return (
     <div>
-      <label htmlFor="email">Email</label>
+      <label htmlFor={id}>Email</label>
       <input
-        id="email"
+        id={id}
         type="email"
         value={email}
         onChange={(e) => setEmail(e.target.value)}
