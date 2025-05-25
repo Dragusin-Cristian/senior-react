@@ -1,36 +1,18 @@
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useDeferredValue, useState } from "react";
+import HeavyComponent from "./components/heavy-component";
+
 
 function App() {
-  const [showInput, setShowInput] = useState(false)
-  
-  //* won't focus:
+ 
+  const [keyword, setKeyword] = useState("")
 
-  // const inputRef = useRef(null)
-
-  // useEffect(() => {
-  //   if(inputRef.current){
-  //     inputRef.current.focus()
-  //   }
-  // }, [inputRef])
-
-
-  //* will focus:
-  const realInputRef = useRef()
-
-  const inputRef = useCallback((input) => {
-    realInputRef.current = input
-    if(input === null) return
-    input.focus()
-  }, [])
-
-  console.log(realInputRef.current?.value);
-  
+  const deferredKeyword = useDeferredValue(keyword)
 
 
   return (
     <>
-      <button onClick={() => setShowInput(s => !s)}>Switch</button>
-      {showInput && <input  type="text" ref={inputRef}/>}
+     <input value={keyword} onChange={(e => setKeyword(e.target.value))} />
+     <HeavyComponent keyword={deferredKeyword} />
     </>
   )
 }
