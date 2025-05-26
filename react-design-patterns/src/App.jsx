@@ -1,30 +1,36 @@
-import { useDeferredValue, useEffect, useState } from "react";
-import HeavyComponent from "./components/heavy-component";
-
+import { useState } from "react";
+import Cover from "./components/cover";
+import Reviews from "./components/reviews";
+import Writer from "./components/writer";
+import { StyledButton } from "./components/styled-elements";
 
 function App() {
- 
-  const [keyword, setKeyword] = useState("")
+  const [section, setSection] = useState("Cover");
 
-  /* 
-  Always pass a primitive value, because objects and arrays are different on each re-render in React.
-  Passing an object or an array will cause an infinite loop, except from the case when they come from outside of the component.
-  */
-  const deferredKeyword = useDeferredValue(keyword)
-
-  useEffect(() => {
-    console.log("value: ", keyword);
-    console.log("deferred value: ", deferredKeyword);
-    console.log("---- end of render -----");
-  }, [keyword, deferredKeyword])
-
-
+  const sectionHandler = (sec) => {
+    setSection(sec);
+  };
   return (
     <>
-     <input value={keyword} onChange={(e => setKeyword(e.target.value))} />
-     <HeavyComponent keyword={deferredKeyword} />
+      <StyledButton onClick={() => sectionHandler("Cover")}>
+        Book Cover
+      </StyledButton>
+      <StyledButton onClick={() => sectionHandler("Reviews")}>
+        Book Reviews
+      </StyledButton>
+      <StyledButton onClick={() => sectionHandler("Writer")}>
+        Book's Writer
+      </StyledButton>
+
+      {section === "Cover" ? (
+        <Cover />
+      ) : section === "Reviews" ? (
+        <Reviews />
+      ) : (
+        <Writer />
+      )}
     </>
-  )
+  );
 }
 
 export default App;
