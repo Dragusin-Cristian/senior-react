@@ -1,10 +1,21 @@
-import { GreenSmallButton, RedButton } from "./components/composition";
+import {
+  GreenSmallButton as ComposedGreenSmallButton,
+  RedButton as ComposedRedButton,
+} from "./components/composition";
+
+import {
+  RedButton as PartialRedButton,
+  SmallRedButton as PartialSmallRedButton,
+} from "./components/partial";
 
 function App() {
   return (
     <>
-      <RedButton text={"I am red"} />
-      <GreenSmallButton text={"I am small and green"} />
+      <ComposedRedButton text={"I am red"} />
+      <ComposedGreenSmallButton text={"I am small and green"} />
+
+      <PartialRedButton text={"I am red"} />
+      <PartialSmallRedButton text={"I am small and red"} />
     </>
   );
 }
