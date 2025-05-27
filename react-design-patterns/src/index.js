@@ -6,7 +6,9 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import HomePage from "./pages/HomePage";
 import ProfilesPage from "./pages/ProfilesPage";
 import NotFoundPage from "./pages/NotFoundPage";
-import { profileRoute } from "./pages/ProfilePage";
+import profileLoader from "./components/profile-loader";
+
+const LazyProfilePage = React.lazy(() => import("./pages/ProfilePage"));
 
 const router = createBrowserRouter([
   {
@@ -20,7 +22,8 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/profiles/:profileId",
-        ...profileRoute,
+        loader: profileLoader,
+        element: <LazyProfilePage />,
       },
     ],
   },
