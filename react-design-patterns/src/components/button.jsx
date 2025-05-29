@@ -1,8 +1,8 @@
 import styles from "./button.module.css";
 
-const Button = ({ size = "m", className = "", ...otherProps }) => {
+const Button = ({ As = "button", size = "m", className = "", ...otherProps }) => {
   return (
-    <button
+    <As
       {...otherProps}
       className={`${styles.button} ${styles[size]} ${className}`}
     />
