@@ -1,4 +1,4 @@
-import { useCartContext } from "../App";
+import { useCartContext } from "./cart-context";
 
 const Display = () => {
   const {
