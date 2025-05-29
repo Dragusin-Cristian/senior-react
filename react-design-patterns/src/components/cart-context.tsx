@@ -25,12 +25,14 @@ function reducer(state: State, action: Action) {
   }
 }
 
-type CartContext = {
-  state: { count: number };
-  dispatch: Dispatch<Action>;
+type StateContext = {
+  count: number;
 };
 
-export const Context = createContext<CartContext | null>(null);
+type DispatchContext = Dispatch<Action>;
+
+export const StateContext = createContext<StateContext | null>(null);
+export const DispatchContext = createContext<DispatchContext | null>(null);
 
 type CartProviderProps = {
   children: ReactNode;
@@ -40,15 +42,27 @@ export const CartProvider = ({ children }: CartProviderProps) => {
   const [state, dispatch] = useReducer(reducer, { count: 0 });
 
   return (
-    <Context.Provider value={{ state, dispatch }}>{children}</Context.Provider>
+    <DispatchContext.Provider value={dispatch}>
+      <StateContext.Provider value={state}>{children}</StateContext.Provider>
+    </DispatchContext.Provider>
   );
 };
 
-export function useCartContext() {
-  const value = useContext(Context);
+export function useStateContext() {
+  const value = useContext(StateContext);
 
   if (value === null) {
-    throw new Error("Must be wrapped inside Context.Provider");
+    throw new Error("Must be wrapped inside StateContext.Provider");
+  }
+
+  return value;
+}
+
+export function useDispatchContext() {
+  const value = useContext(DispatchContext);
+
+  if (value === null) {
+    throw new Error("Must be wrapped inside DispatchContext.Provider");
   }
 
   return value;
