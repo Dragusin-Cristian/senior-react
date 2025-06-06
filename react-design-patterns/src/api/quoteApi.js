@@ -6,3 +6,7 @@ export const fetchTopQuotes = () => {
     return quotes;
   });
 };
+
+export const postQuote = (quote) => api.post("", quote);
+
+export const resetQuotes = () => api.post("reset", {});
