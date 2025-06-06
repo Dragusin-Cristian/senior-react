@@ -6,6 +6,7 @@ import { ToastContainer } from "react-toastify";
 import UpdateQuotes from "./components/update-quote";
 import PaginatedQuotes from "./components/paginated-quotes";
 import InfiniteScrollQuotes from "./components/infinite-scroll-quotes";
+import QueryCancellationWithAbortSignal from "./components/query-cancellation";
 
 
 const queryClient = new QueryClient()
@@ -19,7 +20,8 @@ function App() {
       {/* <SearchMeal /> */}
       <QueryClientProvider client={queryClient}>
         <ToastContainer />
-        <InfiniteScrollQuotes />
+        <QueryCancellationWithAbortSignal />
+        {/* <InfiniteScrollQuotes /> */}
         {/* <PaginatedQuotes /> */}
         {/* <UpdateQuotes />
         <FetchTopQuotes /> */}
