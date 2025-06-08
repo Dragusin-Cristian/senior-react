@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import {useImmer} from "use-immer"
 import styled from "styled-components";
 import { boardData } from '../board-data';
 
@@ -76,7 +77,7 @@ const UpdateTaskInput = styled.input`
 
 const TasksBoard = () => {
 
-    const [board, setBoard] = useState(boardData)
+    const [board, setBoard] = useImmer(boardData)
     const [selectedTask, setSelectedTask] = useState()
     const onSelectTask = (columnIdx, taskIdx) => {
         setSelectedTask({
@@ -89,31 +90,10 @@ const TasksBoard = () => {
         if(!selectedTask) return
         const {columnIdx, taskIdx} = selectedTask
 
-        
-    setBoard((board) => {
-      return {
-        ...board,
-        columns: [
-          ...board.columns.map((column, _columnIdx) => {
-            if (columnIdx !== _columnIdx) {
-              return column;
-            }
-            return {
-              ...column,
-              tasks: column.tasks.map((task, _taskIdx) => {
-                if (taskIdx !== _taskIdx) {
-                  return task;
-                }
-                return {
-                  ...task,
-                  name: e.target.value,
-                };
-              }),
-            };
-          }),
-        ],
-      };
-    });
+        setBoard(board => {
+          board.columns[columnIdx].tasks[taskIdx].name = e.target.value
+        })
+    
     }
 
   return (
