@@ -1,8 +1,10 @@
 import { Link, Route, Routes } from "react-router-dom";
 import styled from "styled-components";
-import Home from "./components/home";
-import About from "./components/about";
-import Contact from "./components/contact";
+import { lazy, Suspense } from "react";
+
+const Home = lazy(() => import("./components/home"))
+const About = lazy(() => import("./components/about"))
+const Contact = lazy(() => import("./components/contact"))
 
 const AppContainer = styled.div`
   margin: 0 auto;
@@ -36,12 +38,14 @@ function App() {
           <Link to="/contact">Contact</Link>
         </Nav>
       </NavContainer>
+      <Suspense fallback={<h3>Loading...</h3>}>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
 
         <Route path="/contact" element={<Contact />} />
       </Routes>
+      </Suspense>
     </AppContainer>
   );
 }
