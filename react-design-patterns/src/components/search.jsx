@@ -1,14 +1,15 @@
 import { searchMeals } from "../api/mealApi";
 import React, { useMemo, useState } from "react";
+import { debounce } from "../helpers/debounce";
 
 const Search = () => {
   const [query, setQuery] = useState("");
   const [meals, setMeals] = useState([]);
 
   const initSearchApiRequest = useMemo(() => {
-    return async (q) => {
+    return debounce(async (q) => {
       setMeals(await searchMeals(q));
-    };
+    }, 500);
   }, []);
 
   const onChangeQuery = (e) => {
