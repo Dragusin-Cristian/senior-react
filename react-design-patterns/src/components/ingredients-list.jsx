@@ -43,6 +43,4 @@ const IngredientsList = (props) => {
   );
 };
 
-export default memo(IngredientsList, ({ingredients: oldIngredients}, {ingredients: newIngredients}) => {
-  return oldIngredients === newIngredients
-});
+export default memo(IngredientsList);
