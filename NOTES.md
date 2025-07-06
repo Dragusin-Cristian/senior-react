@@ -1,10 +1,10 @@
 # NOTES FOR EACH SECTION
 
-- 2-container-components: Container Components DP
+- 2-container-components: *`Container Components DP`*
 
 - 3-controlled-components: Controlled/Uncontrolled Components
 
-- 4-HOC: HOCs
+- 4-HOC: *`HOCs`*
 
 - 6-functional-programming:
     - Recursive Components
@@ -20,18 +20,18 @@
     - Error Boundaries class
     - Keys
     - Event listeners
-    - useEffect & useLayoutEffect
+    - *`seEffect & useLayoutEffect`*
     - useId
-    - useCallback as a ref
-    - useDeferredValue
-    - useTransition
+    - *`useCallback as a ref`*
+    - *`useDeferredValue`*
+    - *`useTransition`*
 
 - 9-clean-code:
     - element prop (named "as")
     - optimising Context API
     - Less useEffects
 
-- 10-scalable-project-architecture: folders structure
+- 10-scalable-project-architecture: *`folders structure`*
 
 - 11-api-layer-async-ops: create an API layer 
 
@@ -43,18 +43,18 @@
 
 - 15-performance-optimisation:
     - lazy loading code splitting
-    - React.memo, useCallback, useMemo
+    - *`React.memo, useCallback, useMemo`*
     - state collocation
     - throttling vs debouncing
 
 - 27-28-ts-component-patterns:
     - types vs interfaces
     - HOC types
-    - RenderProps DP
+    - *`RenderProps DP`*
 
 - 29-bonus:
     - Wrapper Components DP
-    - Polymorphic Component (the same "as" props passed like in section 9)
+    - *`Polymorphic Component`* (the same "as" props passed like in section 9)
 
 - 30-appendix-A-ts-basics:
     - PropsWithChildren generic
