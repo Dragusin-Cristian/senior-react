@@ -1,10 +1,10 @@
 # NOTES FOR EACH SECTION
 
-- 2-container-components: *`Container Components DP`*
+- 2-container-components: *`Container Components DP`* [X]
 
 - 3-controlled-components: Controlled/Uncontrolled Components
 
-- 4-HOC: *`HOCs`*
+- 4-HOC: *`HOCs`* [X]
 
 - 6-functional-programming:
     - Recursive Components
@@ -22,7 +22,7 @@
     - Event listeners
     - *`useEffect & useLayoutEffect`*
     - useId
-    - *`useCallback as a ref`*
+    - *`useCallback as a ref`* [X]
     - *`useDeferredValue`*
     - *`useTransition`*
 
@@ -50,11 +50,11 @@
 - 27-28-ts-component-patterns:
     - types vs interfaces
     - HOC types
-    - *`RenderProps DP`*
+    - *`RenderProps DP`* [X]
 
 - 29-bonus:
     - Wrapper Components DP
-    - *`Polymorphic Component`* (the same "as" props passed like in section 9)
+    - *`Polymorphic Component`* (the same "as" props passed like in section 9) [X]
 
 - 30-appendix-A-ts-basics:
     - PropsWithChildren generic
