@@ -20,7 +20,7 @@
     - Error Boundaries class
     - Keys
     - Event listeners
-    - *`seEffect & useLayoutEffect`*
+    - *`useEffect & useLayoutEffect`*
     - useId
     - *`useCallback as a ref`*
     - *`useDeferredValue`*
