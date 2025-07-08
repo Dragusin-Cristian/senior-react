@@ -1,11 +1,11 @@
 import React from "react";
-import DashboardContainer from "../components/DashboardContainer";
+import NotesDashboard from "../components/NotesDashboard";
 
 const DashboardView = () => {
   return (
     <div>
       {/* layout to be wrapped around, with a nav bar and stuff */}
-      <DashboardContainer />
+      <NotesDashboard />
     </div>
   );
 };

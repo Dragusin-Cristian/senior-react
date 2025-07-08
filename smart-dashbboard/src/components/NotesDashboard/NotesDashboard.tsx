@@ -4,7 +4,7 @@ import TNote from "../../types/Note.type";
 import NoteCard from "./components/NoteCard";
 import ListView from "../common/ListView";
 
-const DashboardContainer = () => {
+const NotesDashboard = () => {
   const [notes, setNotes] = useState<TNote[]>([]);
 
   const fetchNotes = async () => {
@@ -44,4 +44,4 @@ const DashboardContainer = () => {
   );
 };
 
-export default DashboardContainer;
+export default NotesDashboard;
