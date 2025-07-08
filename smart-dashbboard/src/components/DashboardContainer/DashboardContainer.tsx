@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import TNote from "../../types/Note.type";
 import NoteCard from "./components/NoteCard";
+import ListView from "../common/ListView";
 
 const DashboardContainer = () => {
   const [notes, setNotes] = useState<TNote[]>([]);
@@ -26,16 +27,19 @@ const DashboardContainer = () => {
 
   return (
     <div>
-      {notes.map((note) => (
-        <NoteCard
-          key={note.id}
-          id={note.id}
-          body={note.text}
-          title={note.title}
-          edit={editNote}
-          remove={removeNote}
-        />
-      ))}
+      <ListView<TNote>
+        data={notes}
+        renderItem={(note) => (
+          <NoteCard
+            key={note.id}
+            id={note.id}
+            body={note.text}
+            title={note.title}
+            edit={editNote}
+            remove={removeNote}
+          />
+        )}
+      />
     </div>
   );
 };
