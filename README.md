@@ -21,3 +21,5 @@ I plan to create at least 2 components for that: one is Text which will get the 
 - useCallback as ref is very useful for working with refs of elements that may or not be rendered. 
 
 I plan to create a components for adding items. The component AddItem will have a state isAdding boolean. when isAdding is false, a button "Add new item" will be rendered and the input not. When the isAdding is true the button will hide and the input will show.
+
+- Extra, create a src folder short path ~
