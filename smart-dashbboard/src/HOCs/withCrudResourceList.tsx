@@ -1,13 +1,13 @@
 import axios from "axios";
 import React, { useState, useEffect, useCallback, ComponentType } from "react";
 
-type WithCrudResourceProps = {
+type WithCrudResourceListProps = {
   resource: string;
 };
 
 type TypeWithId = { id: number };
 
-export type InjectedProps<T extends TypeWithId> = {
+export type CrudListInjectedProps<T extends TypeWithId> = {
   items: T[];
   loading: boolean;
   error: string | null;
@@ -16,10 +16,10 @@ export type InjectedProps<T extends TypeWithId> = {
   addItem: (newItem: Omit<T, "id">) => {};
 };
 
-function withCrudResource<T extends TypeWithId, ExternalProps>(
-  WrappedComponent: ComponentType<ExternalProps & InjectedProps<T>>
+function withCrudResourceList<T extends TypeWithId, ExternalProps>(
+  WrappedComponent: ComponentType<ExternalProps & CrudListInjectedProps<T>>
 ) {
-  return (props: ExternalProps & WithCrudResourceProps) => {
+  return (props: ExternalProps & WithCrudResourceListProps) => {
     const [data, setData] = useState<T[]>([]);
     const [loading, setLoading] = useState<boolean>(true);
     const [error, setError] = useState<string | null>(null);
@@ -113,4 +113,4 @@ function withCrudResource<T extends TypeWithId, ExternalProps>(
   };
 }
 
-export default withCrudResource;
+export default withCrudResourceList;

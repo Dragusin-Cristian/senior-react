@@ -2,10 +2,10 @@ import React from "react";
 import TNote from "../../types/Note.type";
 import NoteCard from "./components/NoteCard";
 import ListView from "../common/ListView";
-import { InjectedProps } from "../../HOCs/withCrudResource";
-import withCrudResource from "../../HOCs/withCrudResource";
+import { CrudListInjectedProps } from "../../HOCs/withCrudResourceList";
+import withCrudResourceList from "../../HOCs/withCrudResourceList";
 
-const NotesDashboard: React.FC<InjectedProps<TNote>> = ({
+const NotesDashboard: React.FC<CrudListInjectedProps<TNote>> = ({
   items: notes,
   removeItem: removeNote,
   editItem: editNote,
@@ -35,4 +35,4 @@ const NotesDashboard: React.FC<InjectedProps<TNote>> = ({
   );
 };
 
-export default withCrudResource<TNote, {}>(NotesDashboard);
+export default withCrudResourceList<TNote, {}>(NotesDashboard);
