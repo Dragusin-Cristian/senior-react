@@ -2,6 +2,7 @@ import React from "react";
 import TNote from "types/Note.type";
 import Button from "components/common/Button";
 import Text from "components/common/Text";
+import CardLayout from "components/layouts/CardLayout";
 
 type TProps = {
   id: number;
@@ -17,14 +18,18 @@ const NoteCard = ({ body, edit, remove, title, id }: TProps) => {
   };
 
   return (
-    <div style={{ border: "1px solid black" }}>
-      <Text as="title">{title}</Text>
-      <Text as="body">{body}</Text>
-      <div>
+    <CardLayout>
+      <CardLayout.Header>
+        <Text as="title">{title}</Text>
+      </CardLayout.Header>
+      <CardLayout.Body>
+        <Text as="body">{body}</Text>
+      </CardLayout.Body>
+      <CardLayout.Footer>
         <Button onClick={hardcodedEditHandler}>Edit</Button>
         <Button onClick={() => remove(id)}>Remove</Button>
-      </div>
-    </div>
+      </CardLayout.Footer>
+    </CardLayout>
   );
 };
 
