@@ -4,8 +4,8 @@ import NoteCard from "./components/NoteCard";
 import ListView from "../common/ListView";
 import { CrudListInjectedProps } from "../../HOCs/withCrudResourceList";
 import withCrudResourceList from "../../HOCs/withCrudResourceList";
-import Button from "../common/Button";
 import Text from "../common/Text";
+import AddNote from "./components/AddNote";
 
 const NotesDashboard: React.FC<CrudListInjectedProps<TNote>> = ({
   items: notes,
@@ -13,8 +13,12 @@ const NotesDashboard: React.FC<CrudListInjectedProps<TNote>> = ({
   editItem: editNote,
   addItem: addNote,
 }) => {
-  const hardcodedAddNoteHandler = () => {
-    addNote({ title: "New note title", text: "New note text", userId: 1 });
+  const hardcodedAddNoteHandler = async () => {
+    return await addNote({
+      title: "New note title",
+      text: "New note text",
+      userId: 1,
+    });
   };
 
   return (
@@ -33,7 +37,7 @@ const NotesDashboard: React.FC<CrudListInjectedProps<TNote>> = ({
           />
         )}
       />
-      <Button onClick={hardcodedAddNoteHandler}>Create Note</Button>
+      <AddNote addNote={hardcodedAddNoteHandler} />
     </div>
   );
 };
