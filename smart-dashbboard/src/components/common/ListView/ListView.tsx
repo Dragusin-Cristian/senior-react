@@ -1,4 +1,5 @@
 import React from "react";
+import { ListContainer } from "./ListView.styles";
 
 type TProps<T> = {
   data: T[];
@@ -7,16 +8,9 @@ type TProps<T> = {
 
 const ListView = <T,>({ data, renderItem }: TProps<T>) => {
   return (
-    <div
-      style={{
-        display: "flex",
-        flexWrap: "wrap",
-        overflowY: "scroll",
-        gap: 16,
-      }}
-    >
+    <ListContainer>
       {data.map((item, index) => renderItem(item, index))}
-    </div>
+    </ListContainer>
   );
 };
 
