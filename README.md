@@ -1,3 +1,7 @@
+## How to boot up the project:
+1. run the server locally: node server.js
+2. run the client locally: npm start
+
 ## What I applied in this project:
 
 ### Clean and scalable project structure
