@@ -10,7 +10,7 @@ An organized structure improves maintainability and makes it easier to scale the
 
 ### Container Components DP: NotesDashboard and NoteCard components
 
-This pattern separates logic (containers) from presentation (components), making each easier to test, maintain, and reuse. NotesDashboard handles data flow, while NoteCard focuses on UI—following the single responsibility principle.
+This pattern separates logic (containers) from presentation (components), making each easier to test, maintain, and reuse. NotesDashboard handles data flow, while NoteCard focuses on UI, following the single responsibility principle.
 
 ### Render Props DP: ListView component
 
