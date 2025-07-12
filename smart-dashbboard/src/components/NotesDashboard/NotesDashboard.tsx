@@ -1,29 +1,17 @@
-import React, { useEffect, useState } from "react";
-import axios from "axios";
+import React from "react";
 import TNote from "../../types/Note.type";
 import NoteCard from "./components/NoteCard";
 import ListView from "../common/ListView";
+import { InjectedProps } from "../../HOCs/withCrudResource";
+import withCrudResource from "../../HOCs/withCrudResource";
 
-const NotesDashboard = () => {
-  const [notes, setNotes] = useState<TNote[]>([]);
-
-  const fetchNotes = async () => {
-    const data = (await axios.get("/notes")).data;
-    setNotes(data);
-  };
-
+const NotesDashboard: React.FC<InjectedProps<TNote>> = ({ items: notes }) => {
   const editNote = (noteId: number) => {
     console.log(noteId);
   };
   const removeNote = (noteId: number) => {
     console.log(noteId);
   };
-
-  useEffect(() => {
-    if (!notes.length) {
-      fetchNotes();
-    }
-  }, []);
 
   return (
     <div>
@@ -44,4 +32,4 @@ const NotesDashboard = () => {
   );
 };
 
-export default NotesDashboard;
+export default withCrudResource<TNote, {}>(NotesDashboard);

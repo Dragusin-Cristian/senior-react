@@ -5,7 +5,7 @@ const DashboardView = () => {
   return (
     <div>
       {/* layout to be wrapped around, with a nav bar and stuff */}
-      <NotesDashboard />
+      <NotesDashboard resource={"/notes"} />
     </div>
   );
 };
