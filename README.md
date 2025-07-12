@@ -1,29 +1,41 @@
-## How I plan to use every important aspect learned from the course in this project (all namings are just for the concept, not fixed):
+## What I applied in this project:
 
-- Container Components DP is mainly used for separation of concerns: 
-    - the smart component fetched data & executes business logic
-    - the dumb component only displays the data
+### Clean and scalable project structure
 
-I plan to create a Dashboard that fetched data, handles clicks and other events as a smart component. The dashboard will render items as Card instances which will be the dumb component.
+An organized structure improves maintainability and makes it easier to scale the application as it grows. It also enhances team collaboration by making the codebase predictable and easy to navigate.
 
-- Render Props DP receives as props the data and the function that returns the component for each item.
+### Container Components DP: NotesDashboard and NoteCard components
 
-I plan to create a ListView for the items and pass the ListView inside the Dashboard passing as data the data fetched inside the Dashboard smart component and render as renderItem function prop the Card dumb component.
+This pattern separates logic (containers) from presentation (components), making each easier to test, maintain, and reuse. NotesDashboard handles data flow, while NoteCard focuses on UI—following the single responsibility principle.
 
-- HOCs are used to handle business logic and pass the results and functions as props to the Component.
+### Render Props DP: ListView component
 
-I plan to create an includeCrudResource HOC that will take the resource URL, and performe the CRUD actions on that resource (current user, items etc.). The includeCrudResource HOC will wrap around the Dashboard and will pass the logic functions as props. The includeCrudResource HOC will also handle the isLoading state.
+Using render props allows you to share code logic between components while retaining control over rendering. It promotes flexibility and reusability, especially when you want to keep behavior generic but customize rendering.
 
-- Polymorphic Component DP is used for creating flexible and reusable components that can render different HTML elements or components.
+### HOC: withCrudResourceList performs CRUD operations for array structured data
 
-I plan to create at least 2 components for that: one is Text which will get the prop "as" headings h1 - h6, and another one is Button which can render buttons or anchor tags.
+Encapsulates and abstracts CRUD operations for array-structured data, promoting DRY (Don't Repeat Yourself) code. HOCs help for logic reuse and reduce boilerplate in components.
 
-- useCallback as ref is very useful for working with refs of elements that may or not be rendered. 
+### Polymorphic Components DP: Text and Button compoenents
 
-I plan to create a components for adding items. The component AddItem will have a state isAdding boolean. when isAdding is false, a button "Add new item" will be rendered and the input not. When the isAdding is true the button will hide and the input will show.
+They adapt their prendering based on props (rendering as headings, p, button, anchors etc.), enabling flexible UI design while keeping styling and behavior consistent and centralized.
 
-- Extra, create a src folder short path ~
+### useCallback as ref: usePersistedRef custom hook
 
-- Use the Layout Component DP
+Using useCallback as a stable reference improves performance and ensures consistency across renders. This is especially useful in the custom hook usePersistedRef, which manages mutable references tied to business logic (focusing, validating and keeping the value of components that render or not).
 
-I plan to create a few layouts, one for the CardLayout, one for the AppLayout (with navigation)
+### `src` folder as home path
+
+Treating the src directory as the root path simplifies imports (import from '@/components' instead of relative paths like ../../components) and improves readability, especially in large codebases.
+
+### Layout Components DP: CardLayout and AnimatedLayout components
+
+Layout components abstract structural design elements, allowing for consistent layout reuse across the app. This improves UI consistency and reduces code duplication.
+
+### useDeferredValue: expensive search simulator in NotesDashboard components
+
+Helps defer the update of non-urgent state, improving performance during heavy computations like searches. It keeps the UI responsive while waiting for lower-priority updates.
+
+### useLayoutEffect: AnimatedLayout components
+
+Ensures DOM mutations and layout measurements are completed before the browser paints, making it ideal for animations or measurements. This avoids visual glitches and improves the smoothness of animations.
