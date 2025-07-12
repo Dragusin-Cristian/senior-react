@@ -1,5 +1,7 @@
 import React from "react";
 import TNote from "../../../../types/Note.type";
+import Button from "../../../common/Button";
+import Text from "../../../common/Text";
 
 type TProps = {
   id: number;
@@ -16,11 +18,11 @@ const NoteCard = ({ body, edit, remove, title, id }: TProps) => {
 
   return (
     <div style={{ border: "1px solid black" }}>
-      <h3>{title}</h3>
-      <p>{body}</p>
+      <Text as="title">{title}</Text>
+      <Text as="body">{body}</Text>
       <div>
-        <button onClick={hardcodedEditHandler}>Edit</button>
-        <button onClick={() => remove(id)}>Remove</button>
+        <Button onClick={hardcodedEditHandler}>Edit</Button>
+        <Button onClick={() => remove(id)}>Remove</Button>
       </div>
     </div>
   );
