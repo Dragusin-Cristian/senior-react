@@ -20,10 +20,10 @@
     - Error Boundaries class
     - Keys
     - Event listeners
-    - *`useEffect & useLayoutEffect`*
+    - *`useEffect & useLayoutEffect`* [X]
     - useId
     - *`useCallback as a ref`* [X]
-    - *`useDeferredValue`*
+    - *`useDeferredValue`* [X]
     - *`useTransition`*
 
 - 9-clean-code:
@@ -31,7 +31,7 @@
     - optimising Context API
     - Less useEffects
 
-- 10-scalable-project-architecture: *`folders structure`*
+- 10-scalable-project-architecture: *`folders structure`* [X]
 
 - 11-api-layer-async-ops: create an API layer 
 
@@ -43,7 +43,7 @@
 
 - 15-performance-optimisation:
     - lazy loading code splitting
-    - *`React.memo, useCallback, useMemo`*
+    - *`React.memo, useCallback, useMemo`* [ /, X, /]
     - state collocation
     - throttling vs debouncing
 
