@@ -20,7 +20,7 @@ const NotesDashboard: React.FC<CrudListInjectedProps<TNote>> = ({
       <ListView<TNote>
         data={notes}
         renderItem={(note) => (
-          <AnimatedLayout key={note.id}>
+          <AnimatedLayout>
             <NoteCard
               id={note.id}
               body={note.text}

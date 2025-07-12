@@ -1,11 +1,10 @@
 import axios from "axios";
 import React, { useState, useEffect, useCallback, ComponentType } from "react";
+import { TypeWithId } from "types/TypeWithId.type";
 
 type WithCrudResourceListProps = {
   resource: string;
 };
-
-type TypeWithId = { id: number };
 
 export type CrudListInjectedProps<T extends TypeWithId> = {
   items: T[];
