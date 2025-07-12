@@ -9,7 +9,12 @@ const NotesDashboard: React.FC<InjectedProps<TNote>> = ({
   items: notes,
   removeItem: removeNote,
   editItem: editNote,
+  addItem: addNote,
 }) => {
+  const hardcodedAddNoteHandler = () => {
+    addNote({ title: "New note title", text: "New note text", userId: 1 });
+  };
+
   return (
     <div>
       <ListView<TNote>
@@ -25,6 +30,7 @@ const NotesDashboard: React.FC<InjectedProps<TNote>> = ({
           />
         )}
       />
+      <button onClick={hardcodedAddNoteHandler}>Create Note</button>
     </div>
   );
 };
