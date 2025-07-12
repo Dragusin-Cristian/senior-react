@@ -6,6 +6,7 @@ import { CrudListInjectedProps } from "HOCs/withCrudResourceList";
 import withCrudResourceList from "HOCs/withCrudResourceList";
 import Text from "components/common/Text";
 import AddNote from "./components/AddNote";
+import AnimatedLayout from "components/layouts/AnimatedLayout";
 
 const NotesDashboard: React.FC<CrudListInjectedProps<TNote>> = ({
   items: notes,
@@ -19,14 +20,16 @@ const NotesDashboard: React.FC<CrudListInjectedProps<TNote>> = ({
       <ListView<TNote>
         data={notes}
         renderItem={(note) => (
-          <NoteCard
-            key={note.id}
-            id={note.id}
-            body={note.text}
-            title={note.title}
-            edit={editNote}
-            remove={removeNote}
-          />
+          <AnimatedLayout>
+            <NoteCard
+              key={note.id}
+              id={note.id}
+              body={note.text}
+              title={note.title}
+              edit={editNote}
+              remove={removeNote}
+            />
+          </AnimatedLayout>
         )}
       />
       <AddNote addNote={addNote} />
