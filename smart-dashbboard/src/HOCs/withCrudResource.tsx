@@ -12,6 +12,7 @@ export type InjectedProps<T extends TypeWithId> = {
   loading: boolean;
   error: string | null;
   removeItem: (id: number) => {};
+  editItem: (id: number, updatedFields: Partial<T>) => {};
 };
 
 function withCrudResource<T extends TypeWithId, ExternalProps>(
@@ -57,6 +58,26 @@ function withCrudResource<T extends TypeWithId, ExternalProps>(
       [props.resource]
     );
 
+    const editItem = useCallback(
+      async (id: number, updatedFields: Partial<T>) => {
+        setLoading(true);
+        setError(null);
+        try {
+          await axios.put(props.resource + `/${id}`, updatedFields);
+          setData((currentData) =>
+            currentData.map((item) =>
+              item.id === id ? { ...item, ...updatedFields } : item
+            )
+          );
+          setLoading(false);
+        } catch (error) {
+          setError("Some error occured");
+          setLoading(false);
+        }
+      },
+      [props.resource]
+    );
+
     if (loading) return <p>Loading...</p>;
     if (error) return <p>{error}</p>;
 
@@ -65,6 +86,7 @@ function withCrudResource<T extends TypeWithId, ExternalProps>(
         {...props}
         items={data}
         removeItem={removeItem}
+        editItem={editItem}
         loading={loading}
         error={error}
       />

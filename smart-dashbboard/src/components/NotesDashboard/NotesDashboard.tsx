@@ -8,11 +8,8 @@ import withCrudResource from "../../HOCs/withCrudResource";
 const NotesDashboard: React.FC<InjectedProps<TNote>> = ({
   items: notes,
   removeItem: removeNote,
+  editItem: editNote,
 }) => {
-  const editNote = (noteId: number) => {
-    console.log(noteId);
-  };
-
   return (
     <div>
       <ListView<TNote>
