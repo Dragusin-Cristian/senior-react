@@ -11,9 +11,9 @@ export type CrudListInjectedProps<T extends TypeWithId> = {
   items: T[];
   loading: boolean;
   error: string | null;
-  removeItem: (id: number) => {};
-  editItem: (id: number, updatedFields: Partial<T>) => {};
-  addItem: (newItem: Omit<T, "id">) => {};
+  removeItem: (id: number) => Promise<void>;
+  editItem: (id: number, updatedFields: Partial<T>) => Promise<void>;
+  addItem: (newItem: Omit<T, "id">) => Promise<void>;
 };
 
 function withCrudResourceList<T extends TypeWithId, ExternalProps>(

@@ -18,7 +18,7 @@ const usePersistedRef = () => {
     };
   }, []);
 
-  return inputRef;
+  return { inputRef, realInputRef };
 };
 
 export default usePersistedRef;

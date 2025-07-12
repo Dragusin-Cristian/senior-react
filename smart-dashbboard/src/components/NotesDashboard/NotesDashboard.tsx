@@ -13,14 +13,6 @@ const NotesDashboard: React.FC<CrudListInjectedProps<TNote>> = ({
   editItem: editNote,
   addItem: addNote,
 }) => {
-  const hardcodedAddNoteHandler = async () => {
-    return await addNote({
-      title: "New note title",
-      text: "New note text",
-      userId: 1,
-    });
-  };
-
   return (
     <div>
       <Text as="heading">Notes Dashborad</Text>
@@ -37,7 +29,7 @@ const NotesDashboard: React.FC<CrudListInjectedProps<TNote>> = ({
           />
         )}
       />
-      <AddNote addNote={hardcodedAddNoteHandler} />
+      <AddNote addNote={addNote} />
     </div>
   );
 };
