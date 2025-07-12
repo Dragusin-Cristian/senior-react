@@ -28,5 +28,5 @@ export const BodyWrapper = styled(Section)`
 export const FooterWrapper = styled(Section)`
   background-color: #fafafa;
   border-top: 1px solid #ddd;
-  text-align: right;
+  display: flex;
 `;
