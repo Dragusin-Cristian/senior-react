@@ -5,11 +5,11 @@ import ListView from "../common/ListView";
 import { InjectedProps } from "../../HOCs/withCrudResource";
 import withCrudResource from "../../HOCs/withCrudResource";
 
-const NotesDashboard: React.FC<InjectedProps<TNote>> = ({ items: notes }) => {
+const NotesDashboard: React.FC<InjectedProps<TNote>> = ({
+  items: notes,
+  removeItem: removeNote,
+}) => {
   const editNote = (noteId: number) => {
-    console.log(noteId);
-  };
-  const removeNote = (noteId: number) => {
     console.log(noteId);
   };
 
