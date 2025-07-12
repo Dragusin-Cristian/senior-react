@@ -1,6 +1,6 @@
 import React, { useCallback, useState } from "react";
-import Button from "../../../common/Button";
-import usePersistedRef from "../../../../hooks/usePersistedRef";
+import Button from "components/common/Button";
+import usePersistedRef from "hooks/usePersistedRef";
 
 type Props = {
   addNote: () => Promise<{}>;

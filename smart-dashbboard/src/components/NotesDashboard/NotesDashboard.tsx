@@ -1,10 +1,10 @@
 import React from "react";
-import TNote from "../../types/Note.type";
+import TNote from "types/Note.type";
 import NoteCard from "./components/NoteCard";
-import ListView from "../common/ListView";
-import { CrudListInjectedProps } from "../../HOCs/withCrudResourceList";
-import withCrudResourceList from "../../HOCs/withCrudResourceList";
-import Text from "../common/Text";
+import ListView from "components/common/ListView";
+import { CrudListInjectedProps } from "HOCs/withCrudResourceList";
+import withCrudResourceList from "HOCs/withCrudResourceList";
+import Text from "components/common/Text";
 import AddNote from "./components/AddNote";
 
 const NotesDashboard: React.FC<CrudListInjectedProps<TNote>> = ({

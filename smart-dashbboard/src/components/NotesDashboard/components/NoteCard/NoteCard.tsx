@@ -1,7 +1,7 @@
 import React from "react";
-import TNote from "../../../../types/Note.type";
-import Button from "../../../common/Button";
-import Text from "../../../common/Text";
+import TNote from "types/Note.type";
+import Button from "components/common/Button";
+import Text from "components/common/Text";
 
 type TProps = {
   id: number;

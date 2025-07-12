@@ -1,5 +1,5 @@
 import React from "react";
-import NotesDashboard from "../components/NotesDashboard";
+import NotesDashboard from "components/NotesDashboard";
 
 const DashboardView = () => {
   return (
