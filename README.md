@@ -43,3 +43,8 @@ Helps defer the update of non-urgent state, improving performance during heavy c
 ### useLayoutEffect: AnimatedLayout components
 
 Ensures DOM mutations and layout measurements are completed before the browser paints, making it ideal for animations or measurements. This avoids visual glitches and improves the smoothness of animations.
+
+
+## To be continued:
+
+- Storybook for common UI components: Button and Text
