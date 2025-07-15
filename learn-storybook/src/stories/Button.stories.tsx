@@ -1,4 +1,5 @@
 import { Meta, StoryObj } from "@storybook/react-webpack5";
+import { fn } from "storybook/test";
 import { ComponentProps } from "react";
 import { Button } from "../components/Button";
 
@@ -22,6 +23,9 @@ const meta: Meta<StoryProps> = {
       options: ["sm", "md", "lg"],
     },
   },
+  args: {
+    onClick: fn(),
+  },
 };
 
 type Story = StoryObj<StoryProps>;
@@ -29,8 +33,8 @@ type Story = StoryObj<StoryProps>;
 export const Primary: Story = {
   args: {
     buttonText: "Hello",
-    variant: "primary",
-    size: "md",
+    variant: "secondary",
+    size: "sm",
   },
   render: ({ buttonText, ...args }) => <Button {...args}>{buttonText}</Button>,
 };
