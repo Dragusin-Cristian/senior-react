@@ -9,6 +9,7 @@ type StoryProps = ComponentProps<typeof Stack> & {
 
 const meta: Meta<StoryProps> = {
   component: Stack,
+  tags: ["autodocs"],
   argTypes: {
     numberOfChildren: {
       options: [1, 5, 10],
