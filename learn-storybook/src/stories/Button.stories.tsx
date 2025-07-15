@@ -28,9 +28,19 @@ const meta: Meta<StoryProps> = {
   },
 };
 
+export default meta;
+
 type Story = StoryObj<StoryProps>;
 
 export const Primary: Story = {
+  args: {
+    buttonText: "Hello",
+    variant: "primary",
+    size: "sm",
+  },
+  render: ({ buttonText, ...args }) => <Button {...args}>{buttonText}</Button>,
+};
+export const Secondary: Story = {
   args: {
     buttonText: "Hello",
     variant: "secondary",
@@ -38,4 +48,3 @@ export const Primary: Story = {
   },
   render: ({ buttonText, ...args }) => <Button {...args}>{buttonText}</Button>,
 };
-export default meta;
