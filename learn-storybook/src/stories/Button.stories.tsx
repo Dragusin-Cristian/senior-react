@@ -8,6 +8,20 @@ type StoryProps = ComponentProps<typeof Button> & {
 
 const meta: Meta<StoryProps> = {
   component: Button,
+  argTypes: {
+    variant: {
+      control: {
+        type: "select",
+      },
+      options: ["primary", "secondary"],
+    },
+    size: {
+      control: {
+        type: "select",
+      },
+      options: ["sm", "md", "lg"],
+    },
+  },
 };
 
 type Story = StoryObj<StoryProps>;
