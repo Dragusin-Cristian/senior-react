@@ -5,5 +5,16 @@
   "license": "MIT",
   "dependencies": {
     "normalize-scss": "^8.0.0"
+  },
+  "scripts": {
+    "lint": "stylelint './**/*.scss'",
+    "lint:fix": "yarn lint --fix"
+  },
+  "devDependencies": {
+    "prettier": "^3.6.2",
+    "stylelint": "^16.22.0",
+    "stylelint-config-prettier": "^9.0.5",
+    "stylelint-config-sass-guidelines": "^12.1.0",
+    "stylelint-prettier": "^5.0.3"
   }
 }
