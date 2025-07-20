@@ -4,11 +4,13 @@
   "main": "index.js",
   "license": "MIT",
   "dependencies": {
-    "normalize-scss": "^8.0.0"
+    "normalize-scss": "^8.0.0",
+    "sass": "^1.89.2"
   },
   "scripts": {
     "lint": "stylelint './**/*.scss'",
-    "lint:fix": "yarn lint --fix"
+    "lint:fix": "yarn lint --fix",
+    "build": "node src/scripts/build.js"
   },
   "husky": {
     "hooks": {
