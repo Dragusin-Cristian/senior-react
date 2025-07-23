@@ -7,3 +7,8 @@
 - Organisms
 - Templates
 - Pages
+
+## SECTION 8: publish to npm
+
+- Create an organization on npm. The name must be the same with the package name in our project (as we did in the "renamed registry" commit)
+- Add the  "publishConfig" field on every package.json and "private" field on the package you want to be private (as we did in the "publish to npm" commit)
