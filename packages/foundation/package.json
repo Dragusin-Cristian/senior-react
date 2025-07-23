@@ -9,5 +9,8 @@
   "scripts": {
     "build": "tsc",
     "dev": "yarn build --watch"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
