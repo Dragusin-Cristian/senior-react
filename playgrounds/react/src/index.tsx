@@ -1,13 +1,13 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 
-import "@ds.e/scss/lib/Utilities.css";
-import "@ds.e/scss/lib/Text.css";
-import "@ds.e/scss/lib/Margin.css";
-import "@ds.e/scss/lib/Select.css";
-import "@ds.e/scss/lib/global.css";
+import "@ds.e-udemy/scss/lib/Utilities.css";
+import "@ds.e-udemy/scss/lib/Text.css";
+import "@ds.e-udemy/scss/lib/Margin.css";
+import "@ds.e-udemy/scss/lib/Select.css";
+import "@ds.e-udemy/scss/lib/global.css";
 
-import { Margin, Select } from "@ds.e/react";
+import { Margin, Select } from "@ds.e-udemy/react";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement

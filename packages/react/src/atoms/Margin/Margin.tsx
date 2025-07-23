@@ -1,5 +1,5 @@
 import React from "react";
-import { Spacing } from "@ds.e/foundation";
+import { Spacing } from "@ds.e-udemy/foundation";
 
 export type MarginProps = React.PropsWithChildren<{
   space?: keyof typeof Spacing;

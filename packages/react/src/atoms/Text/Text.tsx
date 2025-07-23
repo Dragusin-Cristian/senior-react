@@ -1,5 +1,5 @@
 import React from "react";
-import { FontSize } from "@ds.e/foundation";
+import { FontSize } from "@ds.e-udemy/foundation";
 
 export type TextProps = React.PropsWithChildren<{
   size?: keyof typeof FontSize;
