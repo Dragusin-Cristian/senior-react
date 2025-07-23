@@ -1,5 +1,5 @@
 {
-  "name": "@ds.e/foundation",
+  "name": "@ds.e-udemy/foundation",
   "version": "0.1.2",
   "main": "lib/index.js",
   "license": "MIT",
@@ -13,5 +13,5 @@
   "publishConfig": {
     "access": "public"
   },
-  "gitHead": "05b07180a8145ae6bebbf7c72de2ff1ee11b8542"
+  "gitHead": "ab2231a294e858708f0f02746d15de0fdb40ab3d"
 }
