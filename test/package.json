@@ -4,8 +4,8 @@
   "main": "index.js",
   "license": "MIT",
   "dependencies": {
-    "@ds.e-udemy/foundation": "^0.1.3",
-    "@ds.e-udemy/react": "^0.1.3",
-    "@ds.e-udemy/scss": "^0.1.3"
+    "@ds.e-udemy/foundation": "^0.1.^",
+    "@ds.e-udemy/react": "^0.1.^",
+    "@ds.e-udemy/scss": "^0.1.^"
   }
 }

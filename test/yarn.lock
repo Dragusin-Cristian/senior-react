@@ -2,20 +2,20 @@
 # yarn lockfile v1
 
 
-"@ds.e-udemy/foundation@^0.1.3":
-  version "0.1.3"
-  resolved "https://registry.yarnpkg.com/@ds.e-udemy/foundation/-/foundation-0.1.3.tgz#00a48c14c841d520d15810b7c89531ade4d6b9fb"
-  integrity sha512-aB0ct5eeKWBsSDumEY5nzbst+JPj0gdlCiLxGciULUtp1FxMZztugjj+oIfHoUTY1T6EIoivhWcU9lOKPzMYuQ==
+"@ds.e-udemy/foundation@^0.1.^":
+  version "0.1.4"
+  resolved "https://registry.yarnpkg.com/@ds.e-udemy/foundation/-/foundation-0.1.4.tgz#eaa1d28ff33a68579d85b87fe0ac00821f929949"
+  integrity sha512-VncGYrMjj8oyIGsfCz2G5SSKJ6fwbJvLEvO6yJQV6u5TKa73eYI23bERnFEtmV06UBFT2S6XV9hNhnp1ntcpfg==
 
-"@ds.e-udemy/react@^0.1.3":
-  version "0.1.3"
-  resolved "https://registry.yarnpkg.com/@ds.e-udemy/react/-/react-0.1.3.tgz#539991c4d01ef3a4202edfc867cd1e5e0bcbd554"
-  integrity sha512-zBJtiity7qj/6ufXOmdmnXQj3Zy78tuYtoop8WVyxobQElHvUl5XHWdrbaip+CBFS2k7o20dibrFHwVRM5tNwQ==
+"@ds.e-udemy/react@^0.1.^":
+  version "0.1.4"
+  resolved "https://registry.yarnpkg.com/@ds.e-udemy/react/-/react-0.1.4.tgz#9c7c0c813bc2bade9fb317208f90db7eee96bcb5"
+  integrity sha512-R5y2KFSLZ4oyEyV0NuqDV2E3LEv0YjZnVPkaXVEraHi3eHsIo0yKBceeMLqLE8LxiN8xaBUyVl+hQLVuAmydzw==
 
-"@ds.e-udemy/scss@^0.1.3":
-  version "0.1.3"
-  resolved "https://registry.yarnpkg.com/@ds.e-udemy/scss/-/scss-0.1.3.tgz#0e30f88f641377e6cbf8643bc1c66606e47d5e4b"
-  integrity sha512-vnBwI5kWjt6QVlJmB+LTpd+Wz20MjOE33z2cmpJYG1tvU+20bjv7q6ZKzAzvEByCjhuJ0x9fIiCEh7mtqTCEww==
+"@ds.e-udemy/scss@^0.1.^":
+  version "0.1.4"
+  resolved "https://registry.yarnpkg.com/@ds.e-udemy/scss/-/scss-0.1.4.tgz#cece4e63f583a0625136a501316a4a46bd7da4ef"
+  integrity sha512-Vvc8TnCepTZKcrp5HhpKgkwLl8YdvU9XV4ZMZCKk139WkGGVoJYdWiM+bXzQLldCJpJB6XacSPb4pM6TP+3CKA==
   dependencies:
     normalize-scss "^8.0.0"
     sass "^1.89.2"
