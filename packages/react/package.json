@@ -4,15 +4,21 @@
   "main": "lib/index.js",
   "license": "MIT",
   "devDependencies": {
+    "@storybook/addon-docs": "^9.0.18",
+    "@storybook/addon-webpack5-compiler-swc": "^3.0.0",
+    "@storybook/react-webpack5": "^9.0.18",
     "@types/react": "^19.1.8",
     "react": "^19.1.0",
     "rollup": "^4.45.1",
     "rollup-plugin-typescript2": "^0.36.0",
+    "storybook": "^9.0.18",
     "typescript": "^5.8.3"
   },
   "scripts": {
     "build": "rollup -c",
-    "dev": "yarn build --watch"
+    "dev": "yarn build --watch",
+    "start-storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
   },
   "type": "module"
 }
