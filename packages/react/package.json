@@ -4,11 +4,10 @@
   "main": "lib/index.js",
   "license": "MIT",
   "devDependencies": {
-    "@storybook/addon-docs": "^9.0.18",
+    "@ds.e-udemy/foundation": "^0.1.5",
     "@storybook/addon-webpack5-compiler-swc": "^3.0.0",
     "@storybook/react-webpack5": "^9.0.18",
     "@types/react": "^19.1.8",
-    "@ds.e-udemy/foundation": "^0.1.5",
     "chromatic": "^13.1.2",
     "react": "^19.1.0",
     "rollup": "^4.45.1",
