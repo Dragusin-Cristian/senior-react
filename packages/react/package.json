@@ -20,7 +20,7 @@
     "dev": "yarn build --watch",
     "start-storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "chromatic": "npx chromatic --project-token=chpt_124ede65f7eb167"
+    "test:chromatic": "npx chromatic --project-token=chpt_124ede65f7eb167"
   },
   "type": "module",
   "publishConfig": {
