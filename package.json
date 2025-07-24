@@ -18,7 +18,8 @@
     "build": "yarn lerna run build",
     "dev": "yarn lerna run dev",
     "publish": "yarn build && yarn lerna publish",
-    "commit": "yarn git-cz"
+    "commit": "yarn git-cz",
+    "test:chromatic": "yarn lerna run test:chromatic"
   },
   "private": true,
   "workspaces": {
