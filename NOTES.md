@@ -1,14 +1,14 @@
 # NOTES FOR EACH SECTION
 
-- 2-container-components: *`Container Components DP`*
+- 2-container-components: *`Container Components DP`*: Separate Smart from Dumb components
 
-- 3-controlled-components: Controlled/Uncontrolled Components
+- 3-controlled-components: Controlled/Uncontrolled Components: Control the value of a component with state
 
-- 4-HOC: *`HOCs`*
+- 4-HOC: *`HOCs`*: process business logic & passinng custom props
 
 - 6-functional-programming:
-    - Recursive Components
-    - Compositions
+    - Recursive Components: list calling itself
+    - Compositions: build alternative components starting from a base component
     - Partial Components
 
 - 7-more-design-patterns: 
